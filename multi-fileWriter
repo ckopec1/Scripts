@@ -1,0 +1,11 @@
+# writes contents of 'netmapCONF' file to the file on any number of servers given in arguments
+
+serverArray=$@
+
+echo "$@"
+
+for i in $@
+do
+        echo "Writing to $i"
+cat netmapCONF | ssh $i  "cat >> /opt/cdunix/ndm/cfg/CD.${i^^}/netmap.cfg"
+done
