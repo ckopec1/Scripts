@@ -1,0 +1,35 @@
+#checks VIPs for DR sync to see where they are syncing
+
+import socket
+
+print "\nCHECKING DR SYNC VIPS..."
+ip_list = []
+ais = socket.getaddrinfo("*enterhostnamehere*",0,0,0)
+
+for result in ais:
+        ip_list.append(result[-1][0])
+ip_list = list(set(ip_list))
+
+print ip_list[0] + " = *enterhostnamehere*"
+
+if ip_list[0] == '*enterIPhere*':
+        print "Will sync from RIVERWOODS to NEW ALBANY"
+else:
+        print "Will sync from NEW ALBANY to RIVERWOODS"
+print "\n"
+#_______
+
+ip_list = []
+ais = socket.getaddrinfo("*enterhostnamehere*",0,0,0)
+
+for result in ais:
+        ip_list.append(result[-1][0])
+ip_list = list(set(ip_list))
+
+print ip_list[0] + " = *enterhostnamehere*"
+
+if ip_list[0] == '*enterIPhere*':
+        print "Will sync from RIVERWOODS to NEW ALBANY"
+else:
+        print "Will sync from NEW ALBANY to RIVERWOODS"
+print "\n"
